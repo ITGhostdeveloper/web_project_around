@@ -23,7 +23,8 @@
 
 .profile__name {
   max-width: 373px;
-  height: 39px;
+  height: 45px;
+  overflow: hidden;
   display: inline-block;
   font-family: "inter";
   font-size: 42px;
@@ -36,6 +37,7 @@
 }
 
 .profile__text {
+  overflow: hidden;
   height: 22px;
   font-family: "Inter";
   font-style: normal;
