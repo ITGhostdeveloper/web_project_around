@@ -22,8 +22,10 @@
 }
 
 .profile__name {
-  max-width: 373px;
+  max-width: 430px;
   height: 45px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
   display: inline-block;
   font-family: "inter";
@@ -37,6 +39,9 @@
 }
 
 .profile__text {
+  max-width:415px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
   height: 22px;
   font-family: "Inter";
