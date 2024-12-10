@@ -116,6 +116,16 @@ saveCard.addEventListener("click", function (evt) {
   let newCard = cardTemplate.content.querySelector(".card").cloneNode(true);
   let cardImage = newCard.querySelector(".card__image");
   let cardName = newCard.querySelector(".card__text");
+  let likeButton = newCard.querySelector("#like-button");
+  let removeCardButton = newCard.querySelector(".remove-card");
+
+  likeButton.addEventListener("click", function (evt) {
+    likeButton.classList.toggle("liked-button");
+  });
+
+  removeCardButton.addEventListener("click", function (evt) {
+    newCard.remove();
+  });
 
   cardImage.src = cardLink;
   cardName.textContent = cardValue;
@@ -123,3 +133,5 @@ saveCard.addEventListener("click", function (evt) {
   cardGallery.prepend(newCard);
   popupCard.close();
 });
+
+
