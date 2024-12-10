@@ -39,112 +39,26 @@
             </div>
             <p class="profile__text">Explorador</p>
           </div>
-          <button class="add-button">
+          <button class="add-button" id="add-card">
             <img
               class="add-button__image"
               src="images/sumar.png"
-              alt="adicion simbolo"
+              alt="agregar tarjeta"
             />
           </button>
         </div>
         <section class="gallery">
-          <div class="card">
-            <img
-              class="card__image"
-              src="images/valleyosemite.png"
-              alt="Valle de Yosemite"
-            />
-            <div class="card__elements">
-              <p class="card__text">Valle de Yosemite</p>
-              <button>
-                <img
-                  class="favorite-btn"
-                  src="images/favorite.png"
-                  alt="Boton favorito"
-                />
-              </button>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              class="card__image"
-              src="images/lagolouise.png"
-              alt="Lago Louise"
-            />
-            <div class="card__elements">
-              <p class="card__text">Lago Louise</p>
-              <button>
-                <img
-                  class="favorite-btn"
-                  src="images/favorite.png"
-                  alt="Boton favorito"
-                />
-              </button>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              class="card__image"
-              src="images/montañas.png"
-              alt="Montañas Calvas"
-            />
-            <div class="card__elements">
-              <p class="card__text">Montañas Calvas</p>
-              <button>
-                <img
-                  class="favorite-btn"
-                  src="images/favorite.png"
-                  alt="Boton favorito"
-                />
-              </button>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card__image" src="images/latemar.png" alt="Latemar" />
-            <div class="card__elements">
-              <p class="card__text">Latemar</p>
-              <button>
-                <img
-                  class="favorite-btn"
-                  src="images/favorite.png"
-                  alt="Boton favorito"
-                />
-              </button>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              class="card__image"
-              src="images/vanoisnationalpark.png"
-              alt="Vanois National Park"
-            />
-            <div class="card__elements">
-              <p class="card__text">Vanois National park</p>
-              <button>
-                <img
-                  class="favorite-btn"
-                  src="images/favorite.png"
-                  alt="Boton favorito"
-                />
-              </button>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              class="card__image"
-              src="images/lagobraies.png"
-              alt="Lago di Braies"
-            />
-            <div class="card__elements">
-              <p class="card__text">Lago di Braies</p>
-              <button>
-                <img
-                  class="favorite-btn"
-                  src="images/favorite.png"
-                  alt="Boton favorito"
-                />
-              </button>
-            </div>
+          <div class="card__gallery">
+            <template id="card-template">
+              <div class="card" id="card">
+                <img class="card__image" src="" alt="" />
+                <div class="card__elements">
+                  <button class="remove-card"></button>
+                  <p class="card__text"></p>
+                  <button class="button-liked" id="like-button"></button>
+                </div>
+              </div>
+            </template>
           </div>
         </section>
       </main>
@@ -172,6 +86,37 @@
           </button>
         </form>
       </div>
+    </dialog>
+    <dialog class="popup" id="card-popup">
+      <div class="popup__container">
+        <button class="close" id="close-card">x</button>
+        <h2 class="popup__title">Nuevo Lugar</h2>
+        <form method="post" class="popup__form">
+          <input
+            type="text"
+            id="card-title"
+            value="Title"
+            class="popup__form popup__form_card-title"
+          />
+          <input
+            type="text"
+            id="card-url"
+            value="Image URL"
+            class="popup__form popup__form_card-url"
+          />
+          <button type="button" class="submit" id="save-card">
+            <span class="submit__text">Crear</span>
+          </button>
+        </form>
+      </div>
+    </dialog>
+    <dialog class="popup__image-box" id="image-popup">
+      <div class="popup__image-container">
+        <button class="close-popup" id="close-image">x</button>
+        <img id="popup-image" class="image-details" src="" alt="" />
+        <h2 id="popup-label" class="popup-name">Nuevo Lugar</h2>
+      </div>
+
     </dialog>
     <script src="./scripts/index.js"></script>
   </body>

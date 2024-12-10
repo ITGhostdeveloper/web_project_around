@@ -1,4 +1,8 @@
-.gallery {
+.gallery{
+  margin: auto;
+}
+
+.card__gallery {
   display: grid;
   max-width: 880px;
   width: 100%;
@@ -9,6 +13,7 @@
 }
 
 .card {
+  position: relative;
   width: 282px;
   background: rgba(255, 255, 255, 1);
   border-radius: 10px;
@@ -24,10 +29,17 @@
   aspect-ratio: 1;
 }
 
+.card__elements {
+  max-width: 246px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto 15px auto 21px;
+}
+
 .card__text {
-  max-width: 100%;
-  height: 23px;
-  display: inline-block;
+  max-width: 244px;
+  height: 28px;
   color: rgba(0, 0, 0, 1);
   font-family: "Inter-black";
   font-size: 24px;
@@ -36,10 +48,10 @@
   text-align: left;
   text-decoration: none;
   align-items: center;
-  margin-left: 21px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  align-content: center;
 }
 
 button {
@@ -48,20 +60,45 @@ button {
   outline: none;
 }
 
-.favorite-btn:active {
-  background-color: black;
-}
-.favorite-btn {
-  width: 21px;
+.remove-card {
+  position: absolute;
+  top: 5%;
+  left: 88%;
+  max-width: 18px;
   height: 19px;
-  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  background-image: url(../images/Trash.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.favorite-btn {
+  max-width: 20px;
+  height: 19px;
+  font-size: 25px;
   cursor: pointer;
   background-color: transparent;
 }
 
-.card__elements {
-  display: flex;
-  justify-content: space-between;
+.button-liked:hover {
+  opacity: 0.5;
+}
+
+.button-liked {
+  width: 21px;
+  height: 19px;
+  padding: 10px;
+  cursor: pointer;
+  background-image: url(../images/favorite.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  align-self: center;
+}
+
+.liked-button {
+  background-image: url(../images/Union.png);
 }
 
 @media screen and (max-width: 910px) {
