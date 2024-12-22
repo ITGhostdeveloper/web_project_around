@@ -43,7 +43,7 @@
   width: 90%;
 }
 
-.popup__form_name {
+.popup__input {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   max-width: 358px;
@@ -58,7 +58,7 @@
   margin-left: 35px;
 }
 
-.popup__form_description {
+.popup__input_description {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   max-width: 358px;
@@ -70,10 +70,10 @@
   line-height: 17px;
   color: #000000;
   padding: 13.26px 0;
-  margin: 30px 36px 48px 36px;
+  margin: 0 auto 0px 36px;
 }
 
-.popup__form_card-title {
+.popup__input_card-title {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   max-width: 358px;
@@ -88,7 +88,7 @@
   margin-left: 35px;
 }
 
-.popup__form_card-url {
+.popup__input_card-url {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   max-width: 358px;
@@ -100,7 +100,7 @@
   line-height: 17px;
   color: #000000;
   padding: 13.26px 0;
-  margin: 30px 36px 48px 36px;
+  margin: 0 auto 0px 36px;
 }
 
 .popup__image-box {
@@ -168,7 +168,7 @@
   border-radius: 2px;
   background: rgba(0, 0, 0, 1);
   cursor: pointer;
-  margin: 0px 36px 0px 36px;
+  margin: 48px 36px 0px 36px;
 }
 
 .submit__text {
@@ -200,6 +200,33 @@
   color: #ffffff;
   background: none;
   cursor: pointer;
+}
+
+.popup__button_disabled {
+  opacity: 0.5;
+  cursor: normal;
+}
+
+.popup__input_type_error {
+  border-bottom: red;
+}
+
+.popup__error {
+  max-width: 270px;
+  height: 16px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ff0000;
+  display: none;
+  margin: 6px 0 0 35px;
+}
+
+.popup__error_visible {
+  display: block;
+  margin-bottom: 24px;
 }
 
 @media screen and (max-width: 530px) {

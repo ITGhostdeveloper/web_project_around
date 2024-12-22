@@ -72,16 +72,26 @@
           <input
             type="text"
             id="name-profile"
-            value="Jacques Cousteau"
-            class="popup__form popup__form_name"
+            value=""
+            placeholder="Jacques Cousteau"
+            class="popup__input popup__input_name"
+            minlength="2"
+            maxlength="30"
+            required
           />
+          <span class="popup__error" id="name-profile-error"></span>
           <input
             type="text"
             id="job-profile"
-            value="Explorador"
-            class="popup__form popup__form_description"
+            value=""
+            placeholder="Explorador"
+            class="popup__input popup__input_description"
+            minlength="2"
+            maxlength="30"
+            required
           />
-          <button type="button" class="submit" id="save-button">
+          <span class="popup__error" id="job-profile-error"></span>
+          <button type="submit" class="submit" id="save-button">
             <span class="submit__text">Guardar</span>
           </button>
         </form>
@@ -95,16 +105,24 @@
           <input
             type="text"
             id="card-title"
-            value="Title"
-            class="popup__form popup__form_card-title"
+            value=""
+            placeholder="Title"
+            class="popup__input popup__input_card-title"
+            minlength="2"
+            maxlength="30"
+            required
           />
+          <span class="popup__error" id="card-title-error"></span>
           <input
-            type="text"
+            type="url"
             id="card-url"
-            value="Image URL"
-            class="popup__form popup__form_card-url"
+            value=""
+            placeholder="URL"
+            class="popup__input popup__input_card-url"
+            required
           />
-          <button type="button" class="submit" id="save-card">
+          <span class="popup__error" id="card-url-error"></span>
+          <button type="submit" class="submit" id="save-card">
             <span class="submit__text">Crear</span>
           </button>
         </form>
@@ -117,6 +135,6 @@
         <h2 id="popup-label" class="popup-name">Nuevo Lugar</h2>
       </div>
     </dialog>
-    <script src="./scripts/index.js"></script>
+    <script src="./scripts/index.js" type="module"></script>
   </body>
 </html>

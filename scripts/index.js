@@ -1,3 +1,5 @@
+import "./validate.js";
+
 let popup = document.getElementById("profile-popup");
 let button = document.getElementById("edit-button");
 let closeButton = document.getElementById("close-button");
@@ -132,6 +134,30 @@ saveCard.addEventListener("click", function (evt) {
 
   cardGallery.prepend(newCard);
   popupCard.close();
+
+  cardImage.addEventListener("click", function (evt) {
+    popupImage.showModal();
+
+    imageLabel.src = card.link;
+    popupLabel.textContent = card.name;
+  });
+
+  closePopupImage.addEventListener("click", function (evt) {
+    popupImage.close();
+  });
+
+  cardImage.src = card.link;
+  cardName.textContent = card.name;
 });
 
+popup.addEventListener("click", (evt) => {
+  if (evt.target.classList.contains("popup")) {
+    popup.close();
+  }
+});
 
+popupCard.addEventListener("click", function (evt) {
+  if (evt.target.classList.contains("popup")) {
+    popupCard.close();
+  }
+});
