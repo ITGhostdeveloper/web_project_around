@@ -9,13 +9,13 @@ let inputDescription = document.getElementById("job-profile");
 let namePerson = document.querySelector(".profile__name");
 let descriptionPerson = document.querySelector(".profile__text");
 
-let popupCard = document.getElementById("card-popup");
-let buttonCard = document.getElementById("add-card");
-let closeCard = document.getElementById("close-card");
-let saveCard = document.getElementById("save-card");
-let inputCardName = document.getElementById("card-title");
-let cardUrl = document.getElementById("card-url");
-let cardGallery = document.querySelector(".card__gallery");
+const popupCard = document.getElementById("card-popup");
+const buttonCard = document.getElementById("add-card");
+const closeCard = document.getElementById("close-card");
+const saveCard = document.getElementById("save-card");
+const inputCardName = document.getElementById("card-title");
+const cardUrl = document.getElementById("card-url");
+const cardGallery = document.querySelector(".card__gallery");
 const cardTemplate = document.getElementById("card-template");
 
 const initialCards = [
