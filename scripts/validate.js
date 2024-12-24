@@ -1,4 +1,3 @@
-
 function hideInputError(formElement, inputElement, settings) {
   const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
 

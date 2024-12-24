@@ -16,7 +16,7 @@ let saveCard = document.getElementById("save-card");
 let inputCardName = document.getElementById("card-title");
 let cardUrl = document.getElementById("card-url");
 let cardGallery = document.querySelector(".card__gallery");
-let cardTemplate = document.getElementById("card-template");
+const cardTemplate = document.getElementById("card-template");
 
 const initialCards = [
   {
