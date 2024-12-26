@@ -1,13 +1,13 @@
 import "./validate.js";
 
-let popup = document.getElementById("profile-popup");
-let button = document.getElementById("edit-button");
-let closeButton = document.getElementById("close-button");
-let saveButton = document.getElementById("save-button");
-let inputName = document.getElementById("name-profile");
-let inputDescription = document.getElementById("job-profile");
-let namePerson = document.querySelector(".profile__name");
-let descriptionPerson = document.querySelector(".profile__text");
+const popup = document.getElementById("profile-popup");
+const button = document.getElementById("edit-button");
+const closeButton = document.getElementById("close-button");
+const saveButton = document.getElementById("save-button");
+const inputName = document.getElementById("name-profile");
+const inputDescription = document.getElementById("job-profile");
+const namePerson = document.querySelector(".profile__name");
+const descriptionPerson = document.querySelector(".profile__text");
 
 const popupCard = document.getElementById("card-popup");
 const buttonCard = document.getElementById("add-card");
@@ -46,15 +46,15 @@ const initialCards = [
 ];
 
 initialCards.forEach((card) => {
-  let newCard = cardTemplate.content.querySelector(".card").cloneNode(true);
-  let cardImage = newCard.querySelector(".card__image");
-  let cardName = newCard.querySelector(".card__text");
-  let likeButton = newCard.querySelector("#like-button");
-  let removeCardButton = newCard.querySelector(".remove-card");
-  let popupImage = document.querySelector("#image-popup");
-  let closePopupImage = document.querySelector("#close-image");
-  let imageLabel = document.querySelector("#popup-image");
-  let popupLabel = document.querySelector("#popup-label");
+  const newCard = cardTemplate.content.querySelector(".card").cloneNode(true);
+  const cardImage = newCard.querySelector(".card__image");
+  const cardName = newCard.querySelector(".card__text");
+  const likeButton = newCard.querySelector("#like-button");
+  const removeCardButton = newCard.querySelector(".remove-card");
+  const popupImage = document.querySelector("#image-popup");
+  const closePopupImage = document.querySelector("#close-image");
+  const imageLabel = document.querySelector("#popup-image");
+  const popupLabel = document.querySelector("#popup-label");
 
   likeButton.addEventListener("click", function (evt) {
     likeButton.classList.toggle("liked-button");
@@ -115,11 +115,11 @@ saveCard.addEventListener("click", function (evt) {
   let cardValue = inputCardName.value;
   let cardLink = cardUrl.value;
 
-  let newCard = cardTemplate.content.querySelector(".card").cloneNode(true);
-  let cardImage = newCard.querySelector(".card__image");
-  let cardName = newCard.querySelector(".card__text");
-  let likeButton = newCard.querySelector("#like-button");
-  let removeCardButton = newCard.querySelector(".remove-card");
+  const newCard = cardTemplate.content.querySelector(".card").cloneNode(true);
+  const cardImage = newCard.querySelector(".card__image");
+  const cardName = newCard.querySelector(".card__text");
+  const likeButton = newCard.querySelector("#like-button");
+  const removeCardButton = newCard.querySelector(".remove-card");
 
   likeButton.addEventListener("click", function (evt) {
     likeButton.classList.toggle("liked-button");
