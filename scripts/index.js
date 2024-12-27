@@ -1,4 +1,4 @@
-import "./validate.js";
+import { resetValidations, validationsSettings } from "./validate.js";
 
 const popup = document.getElementById("profile-popup");
 const button = document.getElementById("edit-button");
@@ -73,6 +73,7 @@ initialCards.forEach((card) => {
 
   closePopupImage.addEventListener("click", function (evt) {
     popupImage.close();
+    resetValidations(validationsSettings);
   });
 
   cardImage.src = card.link;
@@ -87,6 +88,7 @@ button.addEventListener("click", function (evt) {
 
 closeButton.addEventListener("click", function (evt) {
   popup.close();
+  resetValidations(validationsSettings);
 });
 
 saveButton.addEventListener("click", function (evt) {
@@ -107,6 +109,7 @@ buttonCard.addEventListener("click", function (evt) {
 
 closeCard.addEventListener("click", function (evt) {
   popupCard.close();
+  resetValidations(validationsSettings);
 });
 
 saveCard.addEventListener("click", function (evt) {
@@ -153,11 +156,13 @@ saveCard.addEventListener("click", function (evt) {
 popup.addEventListener("click", (evt) => {
   if (evt.target.classList.contains("popup")) {
     popup.close();
+    resetValidations(validationsSettings);
   }
 });
 
 popupCard.addEventListener("click", function (evt) {
   if (evt.target.classList.contains("popup")) {
     popupCard.close();
+    resetValidations(validationsSettings);
   }
 });

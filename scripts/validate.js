@@ -1,3 +1,12 @@
+export const validationsSettings = {
+  formSelector: ".popup__form",
+  inputSelector: ".popup__input",
+  submitButtonSelector: ".submit",
+  inactiveButtonClass: "popup__button_disabled",
+  inputErrorClass: "popup__input_type_error",
+  errorClass: "popup__error_visible",
+};
+
 function hideInputError(formElement, inputElement, settings) {
   const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
 
@@ -78,11 +87,17 @@ function enableValidation(settings) {
   });
 }
 
-enableValidation({
-  formSelector: ".popup__form",
-  inputSelector: ".popup__input",
-  submitButtonSelector: ".submit",
-  inactiveButtonClass: "popup__button_disabled",
-  inputErrorClass: "popup__input_type_error",
-  errorClass: "popup__error_visible",
-});
+export function resetValidations(settings) {
+  const forms = Array.from(document.querySelectorAll(settings.formSelector));
+  forms.forEach((formElement) => {
+    formElement.reset();
+    const inputList = Array.from(
+      formElement.querySelectorAll(settings.inputSelector)
+    );
+    inputList.forEach((inputElement) => {
+      hideInputError(formElement, inputElement, settings);
+    });
+  });
+}
+
+enableValidation(validationsSettings);

@@ -39,7 +39,6 @@
 .popup__form {
   justify-content: center;
   padding: auto 36px 36px 36px;
-  justify-content: center;
   width: 90%;
 }
 
@@ -287,7 +286,6 @@
 
   .submit__text {
     margin: auto;
-    font-family: "Inter";
     font-size: 14px;
     font-weight: 400;
     line-height: 16.94px;
